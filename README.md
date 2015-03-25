@@ -31,5 +31,9 @@ You can run the container with all command line documented at https://github.com
 ```bash
 docker run -d \
 -p 0.0.0.0:8888:8888 hauptmedia/kafka-http \
-java -Dconsumer.topics=topic1,topic2 -Dproducer.topics=topic1 -Dhttp.port=8888 -jar kafka-http.jar
+java \
+-Dconsumer.topics=topic1,topic2 \
+-Dproducer.topics=topic1 \
+-Dhttp.port=8888 \
+-jar kafka-http.jar
 ```
