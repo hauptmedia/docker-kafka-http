@@ -1,16 +1,24 @@
 # docker-kafka-http
 
-This docker contains runs the dropwizard-kafka-http endpoint from stealthly (see https://github.com/stealthly/dropwizard-kafka-http)
+This docker contains runs the Kafka HTTP endpoint from Hauptmedia (see https://github.com/hauptmedia/kafka-http)
 
-### Get message for a topic
+### Quick start
+
+Run in test mode with the embedded Kafka/ZooKeeper and topic "test"
 
 ```bash
-curl http://localhost:8080/message?topic=http
+docker run -i -t --rm -p 127.0.0.1:8080:8080 hauptmedia/kafka-http
 ```
 
-### Commit message to given topic
+### Post messages to given topic
 
 ```bash
-curl -d "topic=http&message=hello&key=0" http://localhost:8080/message
+curl -X POST -d data='[{"key":"0","message":"Message 1"},{"key":"1","message":"Message 2"}]' http://localhost:8080/topic/test/
+```
+
+### Get messages for a topic
+
+```bash
+curl "http://localhost:8080/topic/test/?limit=2"
 ```
 
