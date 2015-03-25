@@ -3,7 +3,7 @@ FROM            hauptmedia/java:oracle-java7
 ENV             DEBIAN_FRONTEND noninteractive
 
 ENV		KAFKA_HTTP_VERSION 0.1
-ENV		KAFKA_HTTP_DOWNLOAD_URL	https://dl.dropboxusercontent.com/u/47203203/kafka-http/kafka-http-assembly-${KAFKA_HTTP_VERSION}.jar?1427298060
+ENV		KAFKA_HTTP_DOWNLOAD_URL	https://dl.dropboxusercontent.com/u/47203203/kafka-http/kafka-http-assembly-${KAFKA_HTTP_VERSION}.jar?1427301382
 ENV		KAFKA_HTTP_HOME /opt/kafka-http
 
 ENV             RUN_USER            daemon
