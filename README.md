@@ -1,10 +1,10 @@
 # docker-kafka-http
 
-This docker contains runs the Kafka HTTP endpoint from Hauptmedia (see https://github.com/hauptmedia/kafka-http)
+This docker container runs the Kafka HTTP endpoint from Hauptmedia (see https://github.com/hauptmedia/kafka-http)
 
 ### Quick start
 
-Run in test mode with the embedded Kafka/ZooKeeper and topic "test"
+Running without any parameters will start a instance with a embedded Kafka/ZooKeeper and a consumer and producer topic named "test"
 
 ```bash
 docker run -i -t --rm -p 127.0.0.1:8080:8080 hauptmedia/kafka-http
@@ -24,7 +24,7 @@ http://localhost:8080/topic/test/
 curl "http://localhost:8080/topic/test/?limit=2"
 ```
 
-### Production configuration
+### Configuration
 
 You can run the container with all command line documented at https://github.com/hauptmedia/kafka-http/blob/master/README.md 
 
